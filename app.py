@@ -151,7 +151,7 @@ try:
             )
         )
         
-        st.plotly_chart(fig,  {'responsive': True})
+        st.plotly_chart(fig, use_container_width=True)
         
         show_footer()
     
@@ -163,7 +163,7 @@ try:
             st.subheader("📋 예측 데이터 상세")
             st.dataframe(
                 forecast[['date', 'prediction', 'lower_bound', 'upper_bound']],
-                 {'responsive': True},
+                use_container_width=True,
                 height=600
             )
         
@@ -180,7 +180,7 @@ try:
                 color_continuous_scale='Reds'
             )
             fig_bar.update_layout(height=600, showlegend=False)
-            st.plotly_chart(fig_bar,  {'responsive': True})
+            st.plotly_chart(fig_bar, use_container_width=True)
         
         show_footer()
     
@@ -228,7 +228,7 @@ try:
             color_continuous_scale='Teal'
         )
         fig_weekly.update_layout(showlegend=False, height=400)
-        st.plotly_chart(fig_weekly,  {'responsive': True})
+        st.plotly_chart(fig_weekly, use_container_width=True)
         
         show_footer()
 
